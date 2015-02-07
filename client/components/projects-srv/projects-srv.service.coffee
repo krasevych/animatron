@@ -10,6 +10,9 @@ angular.module 'animatronApp'
     'sortBy': 'staff_picked_time'
     'sortOrder': 'desc'
     'staff-picks': true
+  ,
+    get:
+      cache:true
 
   # Public API here
   getProductsList: (filters)->
