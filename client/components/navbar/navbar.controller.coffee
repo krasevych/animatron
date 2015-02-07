@@ -5,6 +5,12 @@ angular.module 'animatronApp'
   $scope.menu = [
     title: 'Home'
     link: '/'
+  ,
+    title: 'Projects'
+    link: '/projects'
+  ,
+    title: 'About Us'
+    link: '/about'
   ]
   $scope.isCollapsed = true
 
