@@ -1,5 +1,5 @@
 'use strict'
 
 angular.module 'animatronApp'
-.controller 'ProductsCtrl', ($scope) ->
+.controller 'AboutCtrl', ($scope) ->
   $scope.message = 'Hello'

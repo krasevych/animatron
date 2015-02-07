@@ -1,16 +1,16 @@
 'use strict'
 
 angular.module 'animatronApp'
-.factory 'projectsSrv', ($resource)->
+.factory 'projectsSrv', ($resource, apiUrl)->
 
   # Service logic
-  resource = $resource 'project/list',
-    'limit':10
-    'offset':0
-    'sortBy':staff_picked_time
-    'sortOrder':desc
-    'staff-picks':true
+  resource = $resource apiUrl + 'project/list',
+    'limit': 10
+    'offset': 0
+    'sortBy': 'staff_picked_time'
+    'sortOrder': 'desc'
+    'staff-picks': true
 
   # Public API here
-  getProductsList: ->
-    do resource.query
+  getProductsList: (filters)->
+    resource.get(filters)

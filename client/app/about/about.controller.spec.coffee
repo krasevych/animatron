@@ -1,16 +1,16 @@
 'use strict'
 
-describe 'Controller: ProductsCtrl', ->
+describe 'Controller: AboutCtrl', ->
 
   # load the controller's module
   beforeEach module 'animatronApp'
-  ProductsCtrl = undefined
+  AboutCtrl = undefined
   scope = undefined
 
   # Initialize the controller and a mock scope
   beforeEach inject ($controller, $rootScope) ->
     scope = $rootScope.$new()
-    ProductsCtrl = $controller 'ProductsCtrl',
+    AboutCtrl = $controller 'AboutCtrl',
       $scope: scope
 
   it 'should ...', ->
