@@ -4,7 +4,7 @@ angular.module 'animatronApp'
 .factory 'projectsSrv', ($resource, apiUrl)->
 
   # Service logic
-  resource = $resource apiUrl + 'project/list',
+  resource = new $resource apiUrl + 'project/list',
     'limit': 10
     'offset': 0
     'sortBy': 'staff_picked_time'
@@ -13,4 +13,4 @@ angular.module 'animatronApp'
 
   # Public API here
   getProductsList: (filters)->
-    resource.get(filters)
+    resource.get filters

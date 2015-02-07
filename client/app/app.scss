@@ -8,6 +8,16 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
  * App-wide Styles
  */
 @import 'compass/css3';
+
+// values
+$red: #F35F4d;
+$red-line: #F35F4d;
+$green-line: #42db81;
+$blue-line: #24a9ff;
+$orange-line:#FFA500;
+$text:#555;
+
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;

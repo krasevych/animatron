@@ -1,4 +1,4 @@
 .container
   .row
-    .col-md-3(ng-repeat='project in projects')
-      projects-list(product='project')
+    .col-md-3(ng-repeat='project in projects.results')
+      projects-list#project-list(project='project')
