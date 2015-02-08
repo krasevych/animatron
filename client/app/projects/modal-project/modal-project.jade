@@ -2,7 +2,29 @@
   button.close(type="button" ng-click="cancel()")
     span &times;
   h3.modal-title {{ project.name }}
-.modal-body The modal body...
+.modal-body
+  .cover
+    img(ng-src="{{ project.preview_metadata[2]}}")
+  .row
+    .col-md-6
+      ul
+        li
+          strong Avtor:
+          span.pull-right {{ project.display_name }}
+        li
+          strong Created:
+          span.pull-right {{ project.created | date }}
+        li
+          strong(ng-show="project.created!=project.modified") Modified:
+          span.pull-right {{ project.modified | date }}
+        li
+          strong Likes:
+          span.pull-right {{ project.likes }}
+        li
+          strong Scenes:
+          span.pull-right {{ project.scenes }}
+    .col-md-6
+      .description {{project.description}}
 .modal-footer
-  button.btn.btn-primary(ng-click="ok()") OK
-  button.btn.btn-warning(ng-click="cancel()") Cancel
+  .row
+    .col-md-12.text-center {{ project.copyright }}
