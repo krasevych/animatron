@@ -1,2 +1,8 @@
-.col-md-12
-    | This is the modal-project view.
+.modal-header
+  button.close(type="button" ng-click="cancel()")
+    span &times;
+  h3.modal-title {{ project.name }}
+.modal-body The modal body...
+.modal-footer
+  button.btn.btn-primary(ng-click="ok()") OK
+  button.btn.btn-warning(ng-click="cancel()") Cancel

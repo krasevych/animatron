@@ -7,6 +7,5 @@ angular.module 'animatronApp'
   scope:
     project:'='
   controller: ($scope, $http)->
-    console.log $scope.project.preview_metadata[0]
 
   link: (scope, element, attrs) ->

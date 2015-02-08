@@ -18,8 +18,7 @@ angular.module 'animatronApp'
       '$modal'
       ($stateParams, $state, $modal) ->
         $modal.open
-#        app/projects/modal-project/modal-project.html
-          template: '<div class="modal-header"><h3 class="modal-title">Modal</h3></div><div class="modal-body">The modal body...</div><div class="modal-footer"><button class="btn btn-primary" ng-click="ok()">OK</button><button class="btn btn-warning" ng-click="cancel()">Cancel</button></div>'
+          templateUrl: 'app/projects/modal-project/modal-project.html'
           controller: 'ModalProjectCtrl'
         .result.then ->
           # change route after clicking OK button

@@ -2,6 +2,7 @@
 
 angular.module 'animatronApp'
 .controller 'ProjectsCtrl', ($scope, projectsSrv) ->
-  $scope.message = 'Hello'
-  $scope.projects= projectsSrv.getProductsList
+  projectsSrv.getProductsList
     'limit': 9
+  .success (data)->
+    $scope.projects= data.results
