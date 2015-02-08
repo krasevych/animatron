@@ -1,30 +1,30 @@
-.modal-header
-  button.close(type="button" ng-click="cancel()")
-    span &times;
-  h3.modal-title {{ project.name }}
+.btn-close(ng-click="cancel()")
+  i.fa.fa-times-circle
+.modal-header(ng-show = "project.name")
+  h3.modal-title.large-title {{ project.name }}
 .modal-body
-  .cover
+  .cover.thumbnail
     img(ng-src="{{ project.preview_metadata[2]}}")
   .row
-    .col-md-6
-      ul
-        li
+    div(ng-class="project.description!=''? 'col-md-6':'col-md-12'")
+      ul.list-group
+        li.list-group-item
           strong Avtor:
-          span.pull-right {{ project.display_name }}
-        li
+          editable.pull-right(value="project.display_name" on-enter="alert('enter')" on-esc="alert('esc')")
+        li.list-group-item
           strong Created:
           span.pull-right {{ project.created | date }}
-        li
+        li.list-group-item
           strong(ng-show="project.created!=project.modified") Modified:
           span.pull-right {{ project.modified | date }}
-        li
+        li.list-group-item
           strong Likes:
           span.pull-right {{ project.likes }}
-        li
+        li.list-group-item
           strong Scenes:
           span.pull-right {{ project.scenes }}
-    .col-md-6
+
+    .col-md-6(ng-show="project.description!=''")
       .description {{project.description}}
 .modal-footer
-  .row
-    .col-md-12.text-center {{ project.copyright }}
+  .text-center {{ project.copyright }}

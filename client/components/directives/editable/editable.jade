@@ -1,0 +1,7 @@
+div
+  input(type="text" on-enter="save()" on-esc="cancel()" ng-model="value" ng-show="editMode")
+  button(ng-click="cancel()" ng-show="editMode") cancel
+  button(ng-click="save()" ng-show="editMode") save
+  span(ng-mouseenter="showEdit = true" ng-mouseleave="showEdit = false")
+    span(ng-hide="editMode" ng-click="edit()") {{value}}
+    a(ng-show="showEdit" ng-click="edit()") edit

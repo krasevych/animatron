@@ -11,18 +11,15 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 
 // values
 $red: #F35F4d;
-$red-line: #F35F4d;
-$green-line: #42db81;
-$blue-line: #24a9ff;
-$orange-line:#FFA500;
+$green: #42db81;
+$blue: #24a9ff;
+$orange:#FFA500;
 $text:#555;
 
-
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+.large-title{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 // Component styles are injected through grunt
@@ -31,6 +28,7 @@ $text:#555;
 @import 'main/main.scss';
 @import 'projects/modal-project/modal-project.scss';
 @import 'projects/projects.scss';
+@import 'directives/editable/editable.scss';
 @import 'modal/modal.scss';
-@import 'projects-list/projects-list.scss';
+@import 'project/project.scss';
 // endinjector
