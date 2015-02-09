@@ -1,3 +1,23 @@
-editable{
+#editable{
+  &.editable{
+    position: relative;
+    display: inline-block;
+  }
+  .btn-group{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 999;
 
+    font-size: 20px;
+  }
+  .btn{
+    padding: 2px 4px;
+  }
+  .text-success{
+    color: $green;
+  }
+  .text-danger{
+    color: $red;
+  }
 }

@@ -21,6 +21,10 @@ $text:#555;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.bg-none{
+  background: none;
+  border: none;
+}
 
 // Component styles are injected through grunt
 // injector

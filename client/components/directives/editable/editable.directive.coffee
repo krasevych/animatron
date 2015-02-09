@@ -1,12 +1,12 @@
 'use strict'
 
 angular.module 'animatronApp'
-.directive 'editable', ($timeout) ->
-  restrict: 'E'
+.directive 'editableValue', ($timeout) ->
+  restrict: 'A'
   templateUrl: 'components/directives/editable/editable.html'
   scope:
-    key: '=?'
-    value: '=?'
+    key: '=editableKey'
+    value: '=editableValue'
     handleSave: '&onSave'
     handleCancel: '&onCancel'
   link: (scope, elm, attr) ->
