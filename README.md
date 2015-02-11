@@ -15,6 +15,8 @@ npm install
 bower install
 ```
 
+*if happend some error after commands: npm install or/and bower install - please, try again
+
 develop:
 ````
 grunt serve
@@ -37,3 +39,4 @@ npm run update-webdriver
 
 grunt test:e2e
 ````
+Documentstions: https://github.com/DaftMonk/generator-angular-fullstack
