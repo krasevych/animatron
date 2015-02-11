@@ -1,24 +1,30 @@
 .btn-close(ng-click="cancel()")
   i.fa.fa-times-circle
-.modal-header(ng-show = "project.name")
-  h3.modal-title(editable-value="project.name" editable-key="'name'" on-save="update(key, value)")
+.modal-header(ng-show = "titleShow")
+  h3.modal-title(editable-value="project.name" editable-title="true" editable-key="'name'" on-save="update(key, value)")
 .modal-body
   .cover.thumbnail
     img(ng-src="{{ project.preview_metadata[2]}}")
   .row
     div(ng-class="project.description!=''? 'col-md-6':'col-md-12'")
-      ul.list-group
+      ul.list-group.text-right
         li.list-group-item
-          strong Avtor:
-          .pull-right( editable-value="project.display_name" editable-key="'display_name'" on-save="update(key, value)")
+          strong.pull-left Avtor:
+          div(editable-title="true" editable-value="project.display_name" editable-key="'display_name'" on-save="update(key, value)")
         li.list-group-item
-          strong Likes:
-          span.pull-right(editable-value="project.likes" editable-key="'likes'" on-save="update(key, value)")
+          strong.pull-left Created:
+          span {{ project.created | date }}
         li.list-group-item
-          strong Scenes:
-          span.pull-right(editable-value="project.scenes" editable-key="'scenes'" on-save="update(key, value)")
+          strong.pull-left(ng-show="project.created!=project.modified") Modified:
+          span {{ project.modified | date }}
+        li.list-group-item
+          strong.pull-left Likes:
+          span {{ project.likes }}
+        li.list-group-item
+          strong.pull-left Scenes:
+          span {{ project.scenes }}
 
     .col-md-6(ng-show="project.description!=''")
-      .description {{project.description}}
+      .description(editable-value="project.description" editable-key="'description'"  on-save="update(key, value)")
 .modal-footer
   .text-center {{ project.copyright }}

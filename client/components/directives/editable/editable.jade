@@ -1,7 +1,7 @@
-#editable.editable
-  input(type="text" on-enter="save()" on-esc="cancel()" ng-model="value" ng-show="editMode")
+form(name="form")#editable.editable
+  input(type="text" name="edit" required on-enter="save(form)" ng-model="value" ng-show="editMode")
   .btn-group
-    button.text-success.btn.btn-default.fa.fa-check-circle(ng-click="save()" ng-show="editMode")
+    button.text-success.btn.btn-default.fa.fa-check-circle(ng-click="save(form)" ng-show="editMode")
     button.text-danger.btn.btn-default.fa.fa-minus-circle(ng-click="cancel()" ng-show="editMode")
-  span(ng-mouseenter="showEdit = true" ng-mouseleave="showEdit = false")
-    span.large-title(ng-hide="editMode" ng-click="edit()") {{value}}
+  span.inline-flex(ng-mouseenter="showEdit = true" ng-mouseleave="showEdit = false")
+    span.edit-field(ng-hide="editMode" ng-click="edit()" ng-class="{'long-title':longTitle}") {{value}}

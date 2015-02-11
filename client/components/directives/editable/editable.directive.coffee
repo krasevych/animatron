@@ -7,8 +7,10 @@ angular.module 'animatronApp'
   scope:
     key: '=editableKey'
     value: '=editableValue'
+    longTitle: '=editableTitle'
     handleSave: '&onSave'
     handleCancel: '&onCancel'
+
   link: (scope, elm, attr) ->
     previousValue = undefined
 
@@ -21,9 +23,10 @@ angular.module 'animatronApp'
       ), 0, no
       return
 
-    scope.save = ->
-      scope.editMode = no
-      scope.handleSave key:scope.key, value: scope.value
+    scope.save = (form)->
+      if form.$valid
+        scope.editMode = no
+        scope.handleSave key:scope.key, value: scope.value
       return
 
     scope.cancel = ->

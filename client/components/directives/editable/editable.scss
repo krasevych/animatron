@@ -1,5 +1,6 @@
 #editable{
   &.editable{
+    max-width: 100%;
     position: relative;
     display: inline-block;
   }
@@ -19,5 +20,15 @@
   }
   .text-danger{
     color: $red;
+  }
+  .edit-field{
+    position: relative;
+    &:hover{
+      outline: 1px solid #4D90FE;
+    }
+  }
+  .inline-flex{
+    display: inline-flex;
+    max-width: 100%;
   }
 }

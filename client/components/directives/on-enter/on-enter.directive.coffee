@@ -6,6 +6,6 @@ angular.module 'animatronApp'
   (scope, elm, attr) ->
     elm.bind 'keypress', (e) ->
       if e.keyCode == 13
-        scope.$apply attr.onEnter
+        attr.onEnter()
       return
     return

@@ -2,6 +2,7 @@
 
 angular.module 'animatronApp'
 .config ($stateProvider) ->
+
 #  get data of projects before start controller
   projectsResolve = ['$q', 'projectsSrv', ($q, projectsSrv)->
     def = do $q.defer
