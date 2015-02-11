@@ -39,4 +39,4 @@ npm run update-webdriver
 
 grunt test:e2e
 ````
-Documentstions: https://github.com/DaftMonk/generator-angular-fullstack
+Documentation: https://github.com/DaftMonk/generator-angular-fullstack
