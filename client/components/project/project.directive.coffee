@@ -6,6 +6,5 @@ angular.module 'animatronApp'
   restrict: 'E'
   scope:
     project:'='
-  controller: ($scope, $http)->
 
   link: (scope, element, attrs) ->

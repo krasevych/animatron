@@ -5,4 +5,3 @@
     button.text-danger.btn.btn-default.fa.fa-minus-circle(ng-click="cancel()" ng-show="editMode")
   span(ng-mouseenter="showEdit = true" ng-mouseleave="showEdit = false")
     span.large-title(ng-hide="editMode" ng-click="edit()") {{value}}
-    a(ng-show="showEdit" ng-click="edit()") edit

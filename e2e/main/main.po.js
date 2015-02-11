@@ -8,7 +8,7 @@
 var MainPage = function() {
   this.heroEl = element(by.css('.hero-unit'));
   this.h1El = this.heroEl.element(by.css('h1'));
-  this.imgEl = this.heroEl.element(by.css('img'));
+  this.pageHeaderEl = element(by.css('.page-header'));
 };
 
 module.exports = new MainPage();

@@ -13,21 +13,21 @@ angular.module 'animatronApp'
     previousValue = undefined
 
     scope.edit = ->
-      scope.editMode = true
+      scope.editMode = yes
       previousValue = scope.value
       $timeout (->
         elm.find('input')[0].focus()
         return
-      ), 0, false
+      ), 0, no
       return
 
     scope.save = ->
-      scope.editMode = false
-      scope.handleSave value: scope.value
+      scope.editMode = no
+      scope.handleSave key:scope.key, value: scope.value
       return
 
     scope.cancel = ->
-      scope.editMode = false
+      scope.editMode = no
       scope.value = previousValue
       scope.handleCancel value: scope.value
       return

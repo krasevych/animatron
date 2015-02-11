@@ -29,6 +29,7 @@ angular.module 'animatronApp'
     controller: 'ProjectsCtrl'
     resolve:
       projects: projectsResolve
+
     onEnter: ($stateParams, $state, $modal) ->
       redirect = ->
         $state.transitionTo 'projects'
@@ -40,6 +41,7 @@ angular.module 'animatronApp'
         windowClass: 'modal-project'
       .result.then redirect, redirect
       return
+
     onExit: ($rootScope, $modalStack) ->
       $rootScope.$on '$stateChangeStart', ->
         top = $modalStack.getTop()
