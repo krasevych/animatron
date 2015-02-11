@@ -1,7 +1,7 @@
-# animatron
+# Animatron
 ## Usage
 
-Install `generator-angular-fullstack`:
+Install `global package`:
 ```
-npm install -g generator-angular-fullstack
+node, npm, bower, yeoman, generator-angular-fullstack, grunt
 ```
