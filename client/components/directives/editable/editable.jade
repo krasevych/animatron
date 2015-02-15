@@ -3,5 +3,5 @@ form(name="form")#editable.editable
   .btn-group
     button.text-success.btn.btn-default.fa.fa-check-circle(ng-click="save(form)" ng-show="editMode")
     button.text-danger.btn.btn-default.fa.fa-minus-circle(ng-click="cancel()" ng-show="editMode")
-  span.inline-flex(ng-mouseenter="showEdit = true" ng-mouseleave="showEdit = false")
+  span.inline-flex
     span.edit-field(ng-hide="editMode" ng-click="edit()" ng-class="{'long-title':longTitle}") {{value}}
