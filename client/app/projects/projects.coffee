@@ -44,9 +44,7 @@ angular.module 'animatronApp'
       return
 
     onExit: ($rootScope, $modalStack) ->
-      $rootScope.$on '$stateChangeStart', ->
-        top = $modalStack.getTop()
-        if top
-          $modalStack.dismiss top.key
-        return
+      top = $modalStack.getTop()
+      if top
+        $modalStack.dismiss top.key
       return

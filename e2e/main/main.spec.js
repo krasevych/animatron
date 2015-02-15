@@ -8,8 +8,9 @@ describe('Main View', function() {
     page = require('./main.po');
   });
 
-  it('should include jumbotron with correct data', function() {
+  it('should include correct data', function() {
     expect(page.h1El.getText()).toBe('Hello');
     expect(page.pageHeaderEl.getText()).toBe('Test');
+    expect(page.leadEl.getText()).toBe('This is test of app for Animator');
   });
 });
