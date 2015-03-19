@@ -1,4 +1,4 @@
-# Krasevych Roman 
+# Krasevych Roman - test App
 ## Usage
 
 Install `global packages`:
