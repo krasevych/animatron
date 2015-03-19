@@ -1,4 +1,4 @@
-# Animatron
+# Krasevych Roman 
 ## Usage
 
 Install `global packages`:
